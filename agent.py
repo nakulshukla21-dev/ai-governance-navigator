@@ -40,6 +40,7 @@ You have access to MCP tools that retrieve authoritative content from these fram
 - MAS AI guidelines (Singapore)
 - UK AI Policy / regulation (United Kingdom)
 - FATF guidance on AI and financial crime
+- India AI policy (NITI Aayog Responsible AI principles and Digital Personal Data Protection Act)
 
 Workflow:
 1. Read the user's governance question carefully.

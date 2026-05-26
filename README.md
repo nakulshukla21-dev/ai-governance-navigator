@@ -39,6 +39,7 @@ flowchart TB
         T3[get_mas_ai_guidance]
         T4[get_uk_ai_policy]
         T5[get_fatf_ai_guidance]
+        T6[get_india_ai_policy]
     end
 
     subgraph Sources["Authoritative sources"]
@@ -47,6 +48,7 @@ flowchart TB
         MAS[MAS Singapore]
         UK[UK AI Policy]
         FATF[FATF guidance]
+        IN[NITI Aayog + DPDP India]
     end
 
     Q --> ST
@@ -59,7 +61,8 @@ flowchart TB
     T3 --> MAS
     T4 --> UK
     T5 --> FATF
-    T1 & T2 & T3 & T4 & T5 -->|cleaned text| LOOP
+    T6 --> IN
+    T1 & T2 & T3 & T4 & T5 & T6 -->|cleaned text| LOOP
     LOOP --> SYN
     SYN --> OUT
 ```
@@ -68,7 +71,7 @@ flowchart TB
 
 | File | Role |
 |------|------|
-| `server.py` | FastMCP server exposing 5 regulatory research tools over stdio |
+| `server.py` | FastMCP server exposing 6 regulatory research tools over stdio |
 | `agent.py` | Agentic loop: MCP tool discovery, Claude tool use, brief synthesis |
 | `app.py` | Streamlit web UI with PDF upload and Word export |
 | `test_agent.py` | Pytest suite for pure helper functions |
@@ -82,6 +85,7 @@ flowchart TB
 | `get_mas_ai_guidance` | MAS (Singapore) | [mas.gov.sg](https://www.mas.gov.sg/regulation/explainers/ai-in-financial-services) |
 | `get_uk_ai_policy` | UK AI Policy | [gov.uk white paper](https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach/white-paper) |
 | `get_fatf_ai_guidance` | FATF | [fatf-gafi.org](https://www.fatf-gafi.org/en/publications/Digitaltransformation/Guidance-AI-in-financial-crime.html) |
+| `get_india_ai_policy` | India (NITI Aayog + DPDP) | [NITI Aayog Responsible AI PDF](https://www.niti.gov.in/sites/default/files/2021-02/Responsible-AI-22022021.pdf), [MeitY DPDP framework](https://www.meity.gov.in/data-protection-framework) |
 
 ### GovernanceBrief output
 
