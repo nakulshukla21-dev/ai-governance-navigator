@@ -2,7 +2,16 @@
 
 **Live app:** https://bit.ly/ai-governance-navigator
 
-An agentic compliance research tool that answers AI governance questions by querying authoritative regulatory sources across multiple jurisdictions, then synthesizing a structured governance brief.
+An agentic compliance research tool that answers AI governance questions by querying authoritative regulatory sources across **six jurisdictions**, then synthesizing a structured governance brief.
+
+## Supported jurisdictions
+
+- **EU AI Act** (European Union)
+- **NIST AI RMF** (United States)
+- **MAS** AI guidelines (Singapore)
+- **UK AI Policy**
+- **FATF** guidance on AI and financial crime
+- **India** — NITI Aayog Responsible AI principles and the Digital Personal Data Protection Act
 
 ## What it does
 
@@ -92,8 +101,12 @@ flowchart TB
 ```json
 {
   "question": "...",
-  "jurisdictions_consulted": ["EU AI Act", "MAS"],
-  "key_findings": { "EU AI Act": ["..."], "MAS": ["..."] },
+  "jurisdictions_consulted": ["EU AI Act", "India", "MAS"],
+  "key_findings": {
+    "EU AI Act": ["..."],
+    "India": ["..."],
+    "MAS": ["..."]
+  },
   "convergences": ["..."],
   "divergences": ["..."],
   "risk_classification": "High | Medium | Low",
@@ -137,6 +150,8 @@ ANTHROPIC_API_KEY=your-key-here
 
 ### Streamlit web UI (recommended)
 
+**Live app:** https://bit.ly/ai-governance-navigator
+
 **Local** — runs on port 8502 to avoid clashing with other Streamlit apps:
 
 ```powershell
@@ -160,7 +175,7 @@ ANTHROPIC_API_KEY = "your-key-here"
 ### CLI
 
 ```bash
-python agent.py --pretty "What are the requirements for high-risk AI systems in the EU?"
+python agent.py --pretty "What are the data protection requirements for deploying AI in India and the EU?"
 ```
 
 ### MCP server only
