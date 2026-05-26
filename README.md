@@ -195,6 +195,6 @@ ai-governance-navigator/
 - The agent spawns `server.py` as a subprocess; both must live in the same directory.
 - Regulatory content is fetched live from public URLs; results depend on source availability.
 
-## License
+## Author
 
-MIT (or specify your license here)
+**Nakul Shukla** — SVP Product Manager, AI/ML & RegTech | [LinkedIn](https://www.linkedin.com/in/nakul-shukla-62961853/)
