@@ -211,9 +211,13 @@ def main() -> None:
 
     st.title("AI Governance Navigator")
     st.markdown(
-        "Compare your AI governance questions against major regulatory frameworks "
-        "(EU AI Act, NIST AI RMF, MAS, UK AI Policy, FATF, and India — NITI Aayog "
-        "Responsible AI principles and the Digital Personal Data Protection Act). "
+        "Compare your AI governance questions against major regulatory frameworks:\n\n"
+        "- **EU AI Act** (European Union)\n"
+        "- **NIST AI RMF** (United States)\n"
+        "- **MAS** AI guidelines (Singapore)\n"
+        "- **UK AI Policy**\n"
+        "- **FATF** guidance on AI and financial crime\n"
+        "- **India** — NITI Aayog Responsible AI principles and the Digital Personal Data Protection Act\n\n"
         "Upload optional internal artefacts for additional context, then receive "
         "a structured brief with findings, convergences, divergences, and risk classification."
     )
