@@ -1,5 +1,7 @@
 # AI Governance Navigator
 
+**Live app:** https://bit.ly/ai-governance-navigator
+
 An agentic compliance research tool that answers AI governance questions by querying authoritative regulatory sources across multiple jurisdictions, then synthesizing a structured governance brief.
 
 ## What it does
